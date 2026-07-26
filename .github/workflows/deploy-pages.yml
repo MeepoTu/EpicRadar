@@ -1,32 +1,25 @@
-name: Deploy GitHub Pages
+name: Update Radar and Deploy Pages
 on:
-  push:
-    branches: [main]
+  push: { branches: [main] }
+  schedule: [{ cron: "*/5 * * * *" }]
   workflow_dispatch:
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-concurrency:
-  group: pages
-  cancel-in-progress: false
+permissions: { contents: write, pages: write, id-token: write }
+concurrency: { group: pages, cancel-in-progress: false }
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    environment: { name: github-pages, url: "${{ steps.deployment.outputs.page_url }}" }
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
+        with: { node-version: 24, cache: npm }
       - run: npm ci
+      - run: node .github/scripts/update-global-state.mjs
+        env: { HELIUS_API_KEY: "${{ secrets.HELIUS_API_KEY }}" }
+      - run: git config user.name "Epic Radar Bot" && git config user.email "actions@github.com" && git add public/global-state.json && (git diff --cached --quiet || (git commit -m "Update global Epic state" && git push))
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+        with: { path: dist }
       - id: deployment
         uses: actions/deploy-pages@v4
