@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-07-26T10:45:58.140Z",
+  "updatedAt": "2026-07-26T11:49:49.190Z",
   "lastEpic": {
     "name": "Dactyl Flight Squadron",
     "time": 1785058156,
     "signature": "27i6dHtkapPc4md4d7LXPTkqF6cqw3ZHgLppcsoS5Bayh8xtSb1YDnoKddcP8gqkVce3Ax9TYxRkdgwagCvx3rmJ"
   },
-  "lastCheckedSignature": "4tMvYAdo1qSJU7zYspLiECPVwqxncg7eCXmXA5gkrdvPdwaZ2yn7KAxohhYgeoZXgkYaxxUUpFzH8LDGbik3HBXH",
-  "packsSinceLastEpic": 127,
-  "nextEpicProbability": 0.7470411984560594,
+  "lastCheckedSignature": "5kKJDMzZSjqosqfbp4ymBdtRg4sNHHErSxmvPZacQyvRwswDDTUu1zTY1bCdgNoW8SptQAJjRKHjC94WkkQtJVf8",
+  "packsSinceLastEpic": 210,
+  "nextEpicProbability": 0.8295896132962268,
   "individual": {
-    "Zombie Ghost Gang": 0.19371794032795586,
-    "Dactyl Flight Squadron": 0.32797789897109364,
-    "Captain Flea and the Cursed Hat": 0.22534535915700987
+    "Zombie Ghost Gang": 0.2151238667122361,
+    "Dactyl Flight Squadron": 0.3642196159187364,
+    "Captain Flea and the Cursed Hat": 0.25024613066525425
   }
 }
