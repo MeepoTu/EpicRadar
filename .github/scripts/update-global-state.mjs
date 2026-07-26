@@ -3,8 +3,11 @@ const key=process.env.HELIUS_API_KEY;if(!key)throw Error("HELIUS_API_KEY is requ
 const program="CLAY4M7BDfzpaTeuizZgyVw16fE7qiQhPywQzSsGLV3z",epics={"Zombie Ghost Gang":171,"Dactyl Flight Squadron":101,"Captain Flea and the Cursed Hat":147},url=`https://mainnet.helius-rpc.com/?api-key=${key}`,sleep=ms=>new Promise(r=>setTimeout(r,ms));
 async function rpc(method,params){for(let n=0;n<6;n++){const r=await fetch(url,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:1,method,params})}),x=await r.json();if(!x.error)return x.result;if(!/rate limit/i.test(x.error.message))throw Error(`${method}: ${x.error.message}`);await sleep(1000*(n+1))}throw Error(`${method}: rate limited after retries`)}
 const prior=JSON.parse(await readFile("public/global-state.json","utf8"));
-const options=prior.lastCheckedSignature?{limit:100,until:prior.lastCheckedSignature}:{limit:150};
-const signatures=await rpc("getSignaturesForAddress",[program,options]);
+const recent=await rpc("getSignaturesForAddress",[program,{limit:150}]);
+// Deliberately overlap recent history and compare the cursor locally. Some RPC
+// providers handle `until` inconsistently for very active program addresses.
+const cursorIndex=prior.lastCheckedSignature?recent.findIndex(x=>x.signature===prior.lastCheckedSignature):-1;
+const signatures=prior.lastCheckedSignature&&cursorIndex>=0?recent.slice(0,cursorIndex):recent;
 if(!signatures.length){console.log("No new program transactions");process.exit(0)}
 async function transaction(signature){const t=await rpc("getTransaction",[signature,{encoding:"jsonParsed",maxSupportedTransactionVersion:0}]);await sleep(140);return t}
 // Initialisation searches newest-to-oldest for the nearest Epic. Later updates
