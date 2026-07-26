@@ -14,6 +14,9 @@ let state={...prior,lastCheckedSignature:signatures[0].signature};
 let revealCount=0;
 for(const entry of ordered){const t=await transaction(entry.signature);if(!t?.meta?.logMessages?.some(x=>x.includes("Instruction: Reveal")))continue;const asset=t.transaction.message.accountKeys[2]?.pubkey,a=(await rpc("getAccountInfo",[asset,{encoding:"base64"}]))?.value?.data?.[0]||"",text=Buffer.from(a,"base64").toString("utf8"),name=Object.keys(epics).find(x=>text.includes(x));if(name){state.lastEpic={name,time:t.blockTime,signature:entry.signature};state.packsSinceLastEpic=0;if(initial)break}else if(initial){revealCount++}else state.packsSinceLastEpic=(state.packsSinceLastEpic||0)+1;}
 if(initial){if(!state.lastEpic)throw Error("No Epic found in the initial 150 program transactions");state.packsSinceLastEpic=revealCount}
-const base=Object.values(epics).reduce((s,d)=>s+1/d,0),m=(state.packsSinceLastEpic||0)+1;
-state={...state,updatedAt:new Date().toISOString(),nextEpicProbability:Math.min(1,base*m),individual:Object.fromEntries(Object.entries(epics).map(([n,d])=>[n,Math.min(1,m/d)]))};
+const baseProbability=Object.values(epics).reduce((s,d)=>s+1/d,0),multiplier=(state.packsSinceLastEpic||0)+1;
+// Linear odds growth: odds, not probability, scale with the global drought.
+const baseOdds=baseProbability/(1-baseProbability),nextEpicProbability=(multiplier*baseOdds)/(1+multiplier*baseOdds);
+const individual=Object.fromEntries(Object.entries(epics).map(([name,denominator])=>[name,nextEpicProbability*((1/denominator)/baseProbability)]));
+state={...state,updatedAt:new Date().toISOString(),nextEpicProbability,individual};
 await writeFile("public/global-state.json",JSON.stringify(state,null,2)+"\n");
