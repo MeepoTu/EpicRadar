@@ -9,6 +9,7 @@
     "dev": "vite",
     "build": "vite build",
     "start": "vite preview",
+    "start:local": "node local-server.mjs",
     "test": "npm run build",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
