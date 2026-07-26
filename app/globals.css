@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root { --ink: #121312; --cream: #f4f0e6; --paper: #fffcf5; --lime: #c8ff46; --orange: #ff6038; --line: #d8d2c4; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+main { max-width: 1040px; margin: 0 auto; padding: 32px 28px 58px; }
+.hero { padding: 30px 0 44px; display: grid; grid-template-columns: 1.25fr .75fr; align-items: end; gap: 28px; }
+.eyebrow, .label, .section-heading span { letter-spacing: .13em; font-size: 11px; font-weight: 800; }
+.dot { width: 9px; height: 9px; background: var(--lime); border: 1px solid var(--ink); display: inline-block; margin-right: 7px; }
+h1 { font-size: clamp(58px, 10vw, 116px); letter-spacing: -.085em; line-height: .79; margin: 14px 0 0; font-weight: 900; }
+h1 em { font-family: Georgia, serif; font-weight: 400; color: var(--orange); }
+.hero p { font-size: 18px; line-height: 1.45; max-width: 310px; margin: 0 0 5px; }
+.lookup-card, .drought, .records, .odds { background: var(--paper); border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); }
+.lookup-card { padding: 20px; }
+label { display: block; font-size: 13px; font-weight: 800; margin-bottom: 8px; }
+form { display: flex; gap: 10px; }
+input, select { min-width: 0; border: 1.5px solid var(--ink); background: white; color: var(--ink); font: inherit; padding: 13px 14px; }
+input { flex: 1; font-family: ui-monospace, SFMono-Regular, monospace; font-size: 13px; }
+button { border: 1.5px solid var(--ink); background: var(--lime); padding: 0 20px; font-weight: 900; cursor: pointer; box-shadow: 3px 3px 0 var(--ink); }
+button:disabled { opacity: .6; cursor: wait; }.note, .error { font-size: 12px; margin: 12px 0 0; }.error { color: #b62412; font-weight: 700; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin: 26px 0; }
+.metric { border-top: 3px solid var(--ink); padding: 13px 0; }.metric span, .metric small { display: block; }.metric span { font-size: 12px; font-weight: 800; }.metric strong { font-size: clamp(29px, 4vw, 48px); letter-spacing: -.06em; line-height: 1.15; }.metric small { font-size: 12px; }.primary strong { color: var(--orange); }
+.drought { padding: 22px; margin: 28px 0; display: grid; grid-template-columns: 1.1fr .8fr 1.2fr; gap: 24px; align-items: center; }.drought select { width: 100%; margin-top: 8px; font-size: 13px; }.drought-number strong { font-size: 64px; display: block; line-height: .8; letter-spacing: -.08em; }.drought-number span { font-weight: 700; font-size: 12px; }.drought p { border-left: 3px solid var(--orange); padding-left: 13px; line-height: 1.4; font-size: 14px; }
+.records { margin-top: 36px; padding: 20px; }.section-heading { display: flex; justify-content: space-between; align-items: baseline; }.section-heading h2, .odds h2 { margin: 3px 0 18px; letter-spacing: -.05em; font-size: 28px; }.table-head, .record { display: grid; grid-template-columns: .6fr 2fr .7fr; gap: 10px; padding: 11px 4px; border-top: 1px solid var(--line); }.table-head { font-size: 10px; letter-spacing: .1em; font-weight: 800; }.record { font-size: 14px; }.record b { text-align: right; }.baseline { background: #eaffbb; margin: 0 -5px; padding-left: 9px; padding-right: 9px; }
+.odds { margin-top: 36px; padding: 20px; display: grid; grid-template-columns: 1fr 2fr; gap: 35px; }.epic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }.epic-grid div { border-top: 2px solid var(--ink); padding-top: 9px; }.epic-grid span, .epic-grid b { display: block; }.epic-grid span { font-size: 12px; min-height: 34px; }.epic-grid b { font-size: 20px; }
+footer { font-size: 12px; line-height: 1.4; margin: 45px auto 0; max-width: 600px; text-align: center; }
+@media (max-width: 700px) { main { padding: 22px 16px 45px; }.hero { display: block; }.hero p { margin-top: 28px; }.metrics { grid-template-columns: 1fr; }.drought, .odds { grid-template-columns: 1fr; gap: 20px; }.drought-number { display: flex; gap: 12px; align-items: end; }.drought-number strong { font-size: 52px; }.epic-grid { grid-template-columns: 1fr; }.epic-grid span { min-height: auto; }form { display: block; }input, button { width: 100%; height: 48px; }button { margin-top: 10px; }.table-head, .record { grid-template-columns: .7fr 1.6fr .7fr; font-size: 12px; } }
