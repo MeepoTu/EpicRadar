@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-07-26T10:18:42.072Z",
+  "updatedAt": "2026-07-26T10:45:58.140Z",
   "lastEpic": {
     "name": "Dactyl Flight Squadron",
     "time": 1785058156,
     "signature": "27i6dHtkapPc4md4d7LXPTkqF6cqw3ZHgLppcsoS5Bayh8xtSb1YDnoKddcP8gqkVce3Ax9TYxRkdgwagCvx3rmJ"
   },
-  "lastCheckedSignature": "4gvYMKaUBzp7XRDJhf7bRZ53UziBMuE9KdMDAs5UwAUWjW1gbzZiak9NjtWrdSyAa7nQaV6PEJdq7sDYneb7src6",
+  "lastCheckedSignature": "4tMvYAdo1qSJU7zYspLiECPVwqxncg7eCXmXA5gkrdvPdwaZ2yn7KAxohhYgeoZXgkYaxxUUpFzH8LDGbik3HBXH",
   "packsSinceLastEpic": 127,
   "nextEpicProbability": 0.7470411984560594,
   "individual": {
