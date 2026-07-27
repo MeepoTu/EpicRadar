@@ -1,12 +1,36 @@
 {
-  "updatedAt": "2026-07-27T19:17:16.127Z",
+  "updatedAt": "2026-07-27T20:45:53.131Z",
   "lastEpic": {
     "name": "Zombie Ghost Gang",
-    "time": 1785179544,
-    "signature": "2RgUQHgezaJwZ82gQwqt77MVApUAHHjoe6AQP5QMxaxAoE1xDeJ6rcSc5YGKQ41oHVFXvSYj4ARQR3ZsGQc8oHY3"
+    "time": 1785184972,
+    "signature": "5E8oMuKmevnwAaGVr8aW9cQrwP9FsTEiyZznQ6CfvCgxUaPjp7DgGNgEMw6Nq5QRrAkBucJUkYnbhvPBaupZFpBQ"
   },
-  "lastCheckedSignature": "3e6Adc45GrwUNx8jghwmRyTyusxpLzx5ziC3kgp6Qoyj45LXykYpwCJV9mAwLHRca7LbFULgkMmbDCsBvvPZ8F2y",
+  "lastCheckedSignature": "vFWXrZFBRUQDQvxz9aF4rcFYtp4EpDH5UWcDmyCaHCp5XJdpZCeXrfQb3DCP14AWTnfF8dk8kXvwVGaSYTFUuU2",
   "epicHistory": [
+    {
+      "name": "Zombie Ghost Gang",
+      "time": 1785184972,
+      "signature": "5E8oMuKmevnwAaGVr8aW9cQrwP9FsTEiyZznQ6CfvCgxUaPjp7DgGNgEMw6Nq5QRrAkBucJUkYnbhvPBaupZFpBQ",
+      "emptyPacks": 4
+    },
+    {
+      "name": "Zombie Ghost Gang",
+      "time": 1785184972,
+      "signature": "yonYtZJoTJ5Gu5Z5uUvvmCytKDFG5Ht9S49mpXTQsjMFRLr9C7uea2c32pwdjghBgnuaCWCML88qs8jcCM2DFiG",
+      "emptyPacks": 35
+    },
+    {
+      "name": "Dactyl Flight Squadron",
+      "time": 1785184929,
+      "signature": "3S6AiNQtiFQoH5NWRHYzz6BsSJrdaSrjtbZXw5mmcrPXbjFRVLDjXRqNwq1E5Uqrc9kmt2Fr1cJ1cgENfPnvV9ae",
+      "emptyPacks": 62
+    },
+    {
+      "name": "Zombie Ghost Gang",
+      "time": 1785184705,
+      "signature": "LJ4UdUHfNxzLSRh2d1rNvBmjVxeJ7TdTDStJYzyy4UnRmHwcEqTBcqvUXKmHnrv1HYFTrKE2v8bB8znp4B8iiNr",
+      "emptyPacks": 20
+    },
     {
       "name": "Zombie Ghost Gang",
       "time": 1785179544,
@@ -164,11 +188,11 @@
       "emptyPacks": 100
     }
   ],
-  "packsSinceLastEpic": 9,
-  "nextEpicProbability": 0.18746733932914494,
+  "packsSinceLastEpic": 20,
+  "nextEpicProbability": 0.32637773121527325,
   "individual": {
-    "Zombie Ghost Gang": 0.048612830093787696,
-    "Dactyl Flight Squadron": 0.08230489055482869,
-    "Captain Flea and the Cursed Hat": 0.056549618680528546
+    "Zombie Ghost Gang": 0.08463418348359376,
+    "Dactyl Flight Squadron": 0.14329153837321323,
+    "Captain Flea and the Cursed Hat": 0.09845200935846622
   }
 }
