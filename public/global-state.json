@@ -1,12 +1,42 @@
 {
-  "updatedAt": "2026-07-27T23:47:09.189Z",
+  "updatedAt": "2026-07-28T01:07:12.576Z",
   "lastEpic": {
-    "name": "Zombie Ghost Gang",
-    "time": 1785195825,
-    "signature": "2c3KdxsMRMQJwqF8GwdqKJU28Uza1NUbyHKrgvWjUkmt9jJUSCoa8XygXiT5mUgNx3b8NaNdmf1CpyQk7Ve2fDhg"
+    "name": "Dactyl Flight Squadron",
+    "time": 1785200662,
+    "signature": "ntS8BUZ8U5NZtdsqyGrRRQXopxaJavsjcY8HGkmDbzVFamdUid6VVPPWwZX42yGwhW8EgwGuTUJBpY6nJpTJqkT"
   },
-  "lastCheckedSignature": "5iQ5hdeKodH6bK23Z1kBjmUkB98SBu8MvaAnVm9aKF1Lcer1izhQ95HKRqvkq5QeL6uEamE93Xyfx8mg23D4S1wq",
+  "lastCheckedSignature": "2E7PNkpAGZW4TZvoXcxC3uqdMnXC1e3amVgBkBYnZvAJT83rq4Ri3T4mY1xM1o4pWNaXAZWCwvoxkAVXjns1AwRR",
   "epicHistory": [
+    {
+      "name": "Dactyl Flight Squadron",
+      "time": 1785200662,
+      "signature": "ntS8BUZ8U5NZtdsqyGrRRQXopxaJavsjcY8HGkmDbzVFamdUid6VVPPWwZX42yGwhW8EgwGuTUJBpY6nJpTJqkT",
+      "emptyPacks": 34
+    },
+    {
+      "name": "Dactyl Flight Squadron",
+      "time": 1785200618,
+      "signature": "547LVXFYLvjeTeYpe9vxtya3XeSVNN3ZaDmnnGT3xb5CzvYZRBHjtrFWLY2kgpkry5j1Xd1HoSYPDCWKJ3eR6cjx",
+      "emptyPacks": 27
+    },
+    {
+      "name": "Zombie Ghost Gang",
+      "time": 1785200596,
+      "signature": "udmo349tMjMQoP1PANb78v9ThpTaEukSwTyyTCQCazSHPNqDjHp1F7oLLiXWKVpuvseHaf4REds4FtQyU6gqL3N",
+      "emptyPacks": 11
+    },
+    {
+      "name": "Zombie Ghost Gang",
+      "time": 1785200590,
+      "signature": "54su8k8okMm6kdwyxUwKGZ6VtJgC9BdgDSYCQEoebsjS7bVQ8pFxCuVp4kPvq7iowKgRs9HAfctiFV3niqB6A8Vz",
+      "emptyPacks": 6
+    },
+    {
+      "name": "Dactyl Flight Squadron",
+      "time": 1785200573,
+      "signature": "L6oy9MWedF2q6TFbKQpMUAdwqh3iQwUZvib8gp2sUf7jjCynGmP85P9c29YnvCewxyKAM1ffbrYdVq8nHqeUU1t",
+      "emptyPacks": 27
+    },
     {
       "name": "Zombie Ghost Gang",
       "time": 1785195825,
@@ -236,11 +266,11 @@
       "emptyPacks": 100
     }
   ],
-  "packsSinceLastEpic": 3,
-  "nextEpicProbability": 0.08449045636356796,
+  "packsSinceLastEpic": 30,
+  "nextEpicProbability": 0.4169882346639377,
   "individual": {
-    "Zombie Ghost Gang": 0.021909524157364305,
-    "Dactyl Flight Squadron": 0.037094342880290065,
-    "Captain Flea and the Cursed Hat": 0.02548658932591358
+    "Zombie Ghost Gang": 0.10813071906480626,
+    "Dactyl Flight Squadron": 0.18307280158496902,
+    "Captain Flea and the Cursed Hat": 0.12578471401416239
   }
 }
